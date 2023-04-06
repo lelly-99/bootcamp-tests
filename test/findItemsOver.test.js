@@ -23,9 +23,7 @@ var veggies = [
 
 var veggiesResults = [
     {name : 'spinach', qty : 35},
-    {name : 'pumpkin', qty : 28},
     {name : 'celery', qty : 35},
-    {name : 'kale', qty : 27},
 ];
 
 var foods = [
@@ -37,16 +35,16 @@ var foods = [
 var foodsResults = []
 
 describe('findItemsOver' , function(){
-    it('should return fruits with quantity that is above 20 "pears, bananas"' , function(){
-        assert.deepEqual(fruitsResults, findItemsOver(fruits, 20));
+    it('should return fruits with quantity that is above threshold of 15' , function(){
+        assert.deepEqual(fruitsResults, findItemsOver(fruits, 15));
     });
 
-    it('should return veggies with quantity that is above 20 "spinach, pumpkin, celery, kale"' , function(){
-        assert.deepEqual(veggiesResults, findItemsOver(veggies, 20));
+    it('should return veggies with quantity that is above threshold of 30' , function(){
+        assert.deepEqual(veggiesResults, findItemsOver(veggies, 30));
     });
 
-    it('should return an empty array since there are no items with quantity above 20' , function(){
-        assert.deepEqual(foodsResults, findItemsOver(foods, 20));
+    it('should return an empty array since there are no items with quantity above the threshold of 21' , function(){
+        assert.deepEqual(foodsResults, findItemsOver(foods, 21));
     });
 
 });

@@ -11,7 +11,7 @@ describe('isFromBellville' , function(){
         assert.equal(isFromBellville('CY 456'), true);
     });
 
-    it('should return  false for registration number starting with "CA"' , function(){
+    it('should return  false for registration number starting with "CK"' , function(){
         assert.equal(isFromBellville('Ck 123'), false);
     });
 });
